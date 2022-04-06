@@ -49,3 +49,35 @@ err
 ```
 {% endswagger-response %}
 {% endswagger %}
+
+{% swagger method="post" path="" baseUrl="https://server" summary="Signout" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-parameter in="path" name="logout" %}
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Authorization " %}
+express-session(req.session.userid)
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="" %}
+```javascript
+{ "successfully signed out!" }
+```
+{% endswagger-response %}
+
+{% swagger-response status="400: Bad Request" description="" %}
+```javascript
+{ "you're currently not logined" }
+```
+{% endswagger-response %}
+
+{% swagger-response status="500: Internal Server Error" description="" %}
+```javascript
+err
+```
+{% endswagger-response %}
+{% endswagger %}
