@@ -117,9 +117,35 @@ err
 
 {% swagger-response status="200: OK" description="" %}
 ```javascript
+1
+```
+{% endswagger-response %}
+
+{% swagger-response status="201" description="" %}
+```javascript
 {
-    // Response
+    "id": PK,
+    "user_id": "user_id",
+    "username": "username",
+    "email": "email",
+    "password": "password",
+    "phonenumber": "phonenumber",
+    "fav_brand" : "fav_brand",
+    "createdAt": "created time",
+    "updatedAt": "updated time"
 }
+```
+{% endswagger-response %}
+
+{% swagger-response status="409: Conflict" description="" %}
+```javascript
+{ "이미 존재하는 아이입니다." }
+```
+{% endswagger-response %}
+
+{% swagger-response status="500: Internal Server Error" description="" %}
+```javascript
+err
 ```
 {% endswagger-response %}
 {% endswagger %}
