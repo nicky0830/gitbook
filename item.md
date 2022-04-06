@@ -1,8 +1,8 @@
 # Item
 
-{% swagger method="get" path="/items" baseUrl="https://server" summary="랜딩 페이지 선호 브랜드" %}
+{% swagger method="get" path="/items/{:user_fav}" baseUrl="https://server" summary="랜딩 페이지 선호 브랜드" %}
 {% swagger-description %}
-ㅖㄴ 
+
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name=":user_fav" %}
@@ -10,7 +10,7 @@
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Authorization" %}
-express-session(req.session.id) 
+express-session(req.session.id) 로그인 + 렌더링 시 제품 
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="get user's favorite brand items" %}
@@ -50,4 +50,22 @@ express-session(req.session.id)
 {% swagger-description %}
 4개씩 보내고 더보기 누르면 4개씩 더 보내 
 {% endswagger-description %}
+{% endswagger %}
+
+{% swagger method="get" path="/items/{:item_id}" baseUrl="https://server" summary="랜딩페이지  제품 선택 -> 상세 설명 페이지 " %}
+{% swagger-description %}
+선제품 선택 시 요청item adfadsfdsfasdfasfdasdf
+{% endswagger-description %}
+
+{% swagger-parameter in="path" name=":item_id" type="string" %}
+
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="" %}
+```javascript
+{
+    // Response
+}
+```
+{% endswagger-response %}
 {% endswagger %}
