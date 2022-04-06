@@ -4,7 +4,7 @@ description: 사용자 정보
 
 # User
 
-{% swagger method="post" path="/users/login" baseUrl="https://server/users" summary="Login" %}
+{% swagger method="post" path="/users/login" baseUrl="https://server" summary="Login" %}
 {% swagger-description %}
 Login용 
 {% endswagger-description %}
@@ -50,7 +50,7 @@ err
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="post" path="/users/signout" baseUrl="https://server/users" summary="Signout" %}
+{% swagger method="post" path="/users/signout" baseUrl="https://server" summary="Signout" %}
 {% swagger-description %}
 
 {% endswagger-description %}
