@@ -6,7 +6,7 @@ description: 사용자 정보
 
 {% swagger method="post" path="/users/login" baseUrl="https://server" summary="Login" %}
 {% swagger-description %}
-Login용 
+Login 성공 시 기입한 id, pw 일치하는 user 정보 찾아서 돌려주기
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="login " %}
