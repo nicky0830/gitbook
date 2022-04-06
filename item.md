@@ -54,18 +54,27 @@ express-session(req.session.id) 로그인 + 렌더링 시 제품
 
 {% swagger method="get" path="/items/{:item_id}" baseUrl="https://server" summary="랜딩페이지  제품 선택 -> 상세 설명 페이지 " %}
 {% swagger-description %}
-선제품 선택 시 요청item adfadsfdsfasdfasfdasdf
+선제품 선택 시 요청
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name=":item_id" type="string" %}
 
 {% endswagger-parameter %}
 
-{% swagger-response status="200: OK" description="" %}
+{% swagger-response status="200: OK" description="상세 상품 페이지에서 " %}
 ```javascript
-{
-    // Response
+{ 
+"item_id": “item_id”, 
+"name": "name",
+"size": “size”, 
+"grade": “grade”
 }
+```
+{% endswagger-response %}
+
+{% swagger-response status="500: Internal Server Error" description="" %}
+```javascript
+err
 ```
 {% endswagger-response %}
 {% endswagger %}
