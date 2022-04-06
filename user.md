@@ -139,17 +139,13 @@ err
 
 {% swagger-response status="409: Conflict" description="" %}
 ```javascript
-{
-    // Response
-}
+{ "이미 존재하는 이메일입니다." }
 ```
 {% endswagger-response %}
 
 {% swagger-response status="500: Internal Server Error" description="" %}
 ```javascript
-{
-    // Response
-}
+err
 ```
 {% endswagger-response %}
 {% endswagger %}
