@@ -18,31 +18,19 @@ borrow button click
 {% endswagger-description %}
 {% endswagger %}
 
-{% swagger method="get" path="/order/{:user_id}/sell-history" baseUrl="https://server" summary="Mypage - 판매내역" %}
+{% swagger method="get" path="/order/{:user_id}/sell" baseUrl="https://server" summary="Mypage - 판매내역" %}
 {% swagger-description %}
 
 {% endswagger-description %}
 {% endswagger %}
 
-{% swagger method="get" path="/order/{:user_id}/buy-history" baseUrl="https://server" summary="Mypage - 구매내역" %}
+{% swagger method="get" path="/order/{:user_id}/buy" baseUrl="https://server" summary="Mypage - 구매내역" %}
 {% swagger-description %}
 
 {% endswagger-description %}
 {% endswagger %}
 
-{% swagger method="get" path="/order/{:user_id}/borrow-history" baseUrl="https://server" summary="Mypage - 대여내역" %}
-{% swagger-description %}
-
-{% endswagger-description %}
-{% endswagger %}
-
-{% swagger method="get" path="/order/{:user_id}/borrow-cart" baseUrl="https://server" summary="관심상품 - 대여" %}
-{% swagger-description %}
-
-{% endswagger-description %}
-{% endswagger %}
-
-{% swagger method="get" path="/order/{:user_id}/buy-cart" baseUrl="https://server" summary="관심상품-구매" %}
+{% swagger method="get" path="/order/{:user_id}/borrow" baseUrl="https://server" summary="Mypage - 대여내역" %}
 {% swagger-description %}
 
 {% endswagger-description %}
