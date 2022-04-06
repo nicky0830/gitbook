@@ -81,3 +81,46 @@ err
 ```
 {% endswagger-response %}
 {% endswagger %}
+
+{% swagger method="post" path="/users/signup" baseUrl="https://server" summary="Signup" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-parameter in="body" name="id" type="int" %}
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="name" type="string" %}
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="email" type="string" %}
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="password" type="int" %}
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="phone_number" type="int" %}
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="fav_brand" type="string" %}
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="user_id" type="string" %}
+
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="" %}
+```javascript
+{
+    // Response
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
