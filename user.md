@@ -13,7 +13,7 @@ Login 성공 시 기입한 id, pw 일치하는 user 정보 찾아서 돌려주�
 
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" required="true" %}
+{% swagger-parameter in="body" required="true" name="email" %}
 
 {% endswagger-parameter %}
 
@@ -25,7 +25,6 @@ Login 성공 시 기입한 id, pw 일치하는 user 정보 찾아서 돌려주�
 ```javascript
 {
     "id": PK,
-    "user_id": "user_id",
     "username": "username",
     "email": "email",
     "password": "password",
@@ -111,10 +110,6 @@ err
 
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="user_id" type="string" %}
-
-{% endswagger-parameter %}
-
 {% swagger-response status="200: OK" description="" %}
 ```javascript
 1
@@ -125,7 +120,6 @@ err
 ```javascript
 {
     "id": PK,
-    "user_id": "user_id",
     "username": "username",
     "email": "email",
     "password": "password",
