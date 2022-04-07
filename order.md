@@ -124,11 +124,20 @@ err
    "item_name" : "item_name",
    "createdAt" : "createdAt",
    "item_grade" : "item_grade", 
-   "item_size" : "item_size" // Response
+   "item_size" : "item_size", 
+   "item_price" : "item_price"
    }, 
+   ...
+   {}
    
    ]
 }
+```
+{% endswagger-response %}
+
+{% swagger-response status="500: Internal Server Error" description="" %}
+```javascript
+err
 ```
 {% endswagger-response %}
 {% endswagger %}
@@ -137,11 +146,87 @@ err
 {% swagger-description %}
 
 {% endswagger-description %}
+
+{% swagger-response status="200: OK" description="" %}
+```javascript
+{
+  buyHistory : [
+  { "id":"id", 
+   "user_id":"user_id",
+   // user table id
+   // signup user id 아이 user _id  
+   "item_id" : "item_id",
+   "item_name" : "item_name",
+   "createdAt" : "createdAt",
+   "item_grade" : "item_grade", 
+   "item_size" : "item_size", 
+    "item_price" : "item_price"
+   }, 
+   ..., 
+   { "id":"id", 
+   "user_id":"user_id",
+   // user table id
+   // signup user id 아이 user _id  
+   "item_id" : "item_id",
+   "item_name" : "item_name",
+   "createdAt" : "createdAt",
+   "item_grade" : "item_grade", 
+   "item_size" : "item_size", 
+    "item_price" : "item_price"
+   }, 
+   
+   ]
+```
+{% endswagger-response %}
+
+{% swagger-response status="500: Internal Server Error" description="" %}
+```javascript
+err
+```
+{% endswagger-response %}
 {% endswagger %}
 
 {% swagger method="get" path="/order/{:user_id}/borrow" baseUrl="https://server" summary="Mypage - 대여내역" %}
 {% swagger-description %}
 
 {% endswagger-description %}
+
+{% swagger-response status="200: OK" description="" %}
+```javascript
+{
+  borrowHistory : [
+  { "id":"id", 
+   "user_id":"user_id",
+   // user table id
+   // signup user id 아이 user _id  
+   "item_id" : "item_id",
+   "item_name" : "item_name",
+   "createdAt" : "createdAt",
+   "item_grade" : "item_grade", 
+   "item_size" : "item_size", 
+    "item_price" : "item_price"
+   }, 
+   ..., 
+   { "id":"id", 
+   "user_id":"user_id",
+   // user table id
+   // signup user id 아이 user _id  
+   "item_id" : "item_id",
+   "item_name" : "item_name",
+   "createdAt" : "createdAt",
+   "item_grade" : "item_grade", 
+   "item_size" : "item_size", 
+    "item_price" : "item_price"
+   }, 
+   
+   ]
+```
+{% endswagger-response %}
+
+{% swagger-response status="500: Internal Server Error" description="" %}
+```javascript
+err
+```
+{% endswagger-response %}
 {% endswagger %}
 

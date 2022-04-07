@@ -37,12 +37,12 @@ express-session(req.session.id) 로그인 + 렌더링 시 제품
 ```
 {% endswagger-response %}
 
-{% swagger-response status="201" description="" %}
-```javascript
-{
-    // Response
-}
+{% swagger-response status="500: Internal Server Error" description="" %}
 ```
+err
+```
+
+
 {% endswagger-response %}
 {% endswagger %}
 
@@ -50,6 +50,25 @@ express-session(req.session.id) 로그인 + 렌더링 시 제품
 {% swagger-description %}
 4개씩 보내고 더보기 누르면 4개씩 더 보내 
 {% endswagger-description %}
+
+{% swagger-response status="200: OK" description="" %}
+```javascript
+{
+    popular : [
+    {item_id, img, name, price},
+     {item_id, img, name, price},
+      {item_id, img, name, price},
+       {item_id, img, name, price}
+    ]
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="500: Internal Server Error" description="" %}
+```javascript
+err
+```
+{% endswagger-response %}
 {% endswagger %}
 
 {% swagger method="get" path="/items/{:item_id}" baseUrl="https://server" summary="랜딩페이지  제품 선택 -> 상세 설명 페이지 " %}
