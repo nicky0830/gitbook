@@ -13,6 +13,10 @@ buy button click, 구Mygpa      Mypage의 구매내역ㅠ
 
 {% endswagger-parameter %}
 
+{% swagger-parameter in="header" name="Authorization" type="string" %}
+accessToken
+{% endswagger-parameter %}
+
 {% swagger-response status="201: Created" description="" %}
 ```javascript
 {
@@ -47,6 +51,10 @@ borrow button click
 
 {% swagger-parameter in="body" name="item_id " type="int" %}
 
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Authorization " type="string" %}
+accessToken
 {% endswagger-parameter %}
 
 {% swagger-response status="201: Created" description="" %}
@@ -85,6 +93,10 @@ err
 
 {% endswagger-parameter %}
 
+{% swagger-parameter in="header" name="Authorization" type="string" %}
+accessToken
+{% endswagger-parameter %}
+
 {% swagger-response status="201: Created" description="" %}
 ```javascript
 {
@@ -112,6 +124,10 @@ err
 {% swagger-description %}
 
 {% endswagger-description %}
+
+{% swagger-parameter in="header" name="Authorization" type="string" %}
+accessToken
+{% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="" %}
 ```javascript
@@ -146,6 +162,10 @@ err
 {% swagger-description %}
 
 {% endswagger-description %}
+
+{% swagger-parameter in="header" name="Authorization" type="string" %}
+accessToken
+{% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="" %}
 ```javascript
@@ -190,6 +210,10 @@ err
 {% swagger-description %}
 
 {% endswagger-description %}
+
+{% swagger-parameter in="header" name="Authorization" type="string" %}
+accessToken
+{% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="" %}
 ```javascript

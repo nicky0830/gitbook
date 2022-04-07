@@ -23,16 +23,25 @@ Login 성공 시 기입한 id, pw 일치하는 user 정보 찾아서 돌려주�
 
 {% swagger-response status="200: OK" description="response user data table" %}
 ```javascript
-{
+res.cookies('refreshToken', refreshToken).send(
+{ data : {
     "id": PK,
-    "username": "username",
+    "user_name": "user_name",
     "email": "email",
     "password": "password",
-    "phonenumber": "phonenumber",
+    "phone_number": "phone_number",
     "fav_brand" : "fav_brand",
     "createdAt": "created time",
     "updatedAt": "updated time"
-}
+},
+accessToken: accessToken}
+)
+
+
+//cookie에 refreshToken (보안)
+//state에 accessToken (expire)
+//logout 시 delete all tokens
+
 ```
 {% endswagger-response %}
 
@@ -58,13 +67,14 @@ err
 
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Authorization " %}
-//req.cookie에 있는 ㄱrefreshToken    brwoToken
+{% swagger-parameter in="header" name="" type="" %}
+
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="" %}
 ```javascript
 { "successfully signed out!" }
+// res.cleanCookies() : delete refreshToken, accessToken
 ```
 {% endswagger-response %}
 
@@ -90,7 +100,7 @@ err
 
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="name" type="string" %}
+{% swagger-parameter in="body" name="user_name" type="string" %}
 
 {% endswagger-parameter %}
 
@@ -120,10 +130,10 @@ err
 ```javascript
 {
     "id": PK,
-    "username": "username",
+    "user_name": "user_name",
     "email": "email",
     "password": "password",
-    "phonenumber": "phonenumber",
+    "phone_number": "phone_number",
     "fav_brand" : "fav_brand",
     "createdAt": "created time",
     "updatedAt": "updated time"

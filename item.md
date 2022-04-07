@@ -10,7 +10,11 @@
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Authorization" %}
-express-session(req.session.id) 로그인 + 렌더링 시 제품 
+accessToken&#x20;
+
+if expired, req.cookies -> refreshToken
+
+ㅜ n ew accessTioken&#x20;
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="get user's favorite brand items" %}

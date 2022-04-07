@@ -5,6 +5,10 @@
 
 {% endswagger-description %}
 
+{% swagger-parameter in="header" name="Authorization" type="string" %}
+accessToken
+{% endswagger-parameter %}
+
 {% swagger-response status="200: OK" description="" %}
 ```javascript
 {
@@ -49,6 +53,10 @@ err
 {% swagger-description %}
 
 {% endswagger-description %}
+
+{% swagger-parameter in="header" name="Authorization" type="string" %}
+accessToken
+{% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="" %}
 ```javascript
@@ -103,6 +111,10 @@ err
 
 {% endswagger-parameter %}
 
+{% swagger-parameter in="header" name="Authorization" type="string" %}
+accessToken
+{% endswagger-parameter %}
+
 {% swagger-response status="201: Created" description="" %}
 ```javascript
 {
@@ -137,6 +149,10 @@ err
 
 {% swagger-parameter in="body" name="item_id" type="int" %}
 
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Authorization" type="string" %}
+accessToken
 {% endswagger-parameter %}
 
 {% swagger-response status="201: Created" description="" %}
