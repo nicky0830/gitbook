@@ -61,7 +61,7 @@ accessToken: accessToken}
 
 {% swagger-response status="500: Internal Server Error" description="" %}
 ```javascript
-err
+internal server error
 ```
 {% endswagger-response %}
 {% endswagger %}
