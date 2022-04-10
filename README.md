@@ -9,7 +9,7 @@ description: 사용자 정보
 Login 성공 시 기입한 id, pw 일치하는 user 정보 찾아서 돌려주기
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="login " %}
+{% swagger-parameter in="path" name="signin" %}
 
 {% endswagger-parameter %}
 
@@ -42,6 +42,14 @@ accessToken: accessToken}
 //state에 accessToken (expire)
 //logout 시 delete all tokens
 
+```
+{% endswagger-response %}
+
+{% swagger-response status="400: Bad Request" description="email, pw 중 하나 없을 때 " %}
+```javascript
+{
+   'bad request'
+}
 ```
 {% endswagger-response %}
 
