@@ -1,6 +1,6 @@
 # Item
 
-{% swagger method="get" path="/item/{:user_fav}" baseUrl="https://server" summary="랜딩 페이지 선호 브랜드" %}
+{% swagger method="get" path="/item/{:user_id}/fav" baseUrl="https://server" summary="랜딩 페이지 선호 브랜드" %}
 {% swagger-description %}
 
 {% endswagger-description %}
