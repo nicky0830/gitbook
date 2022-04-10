@@ -24,6 +24,7 @@ Login 성공 시 기입한 id, pw 일치하는 user 정보 찾아서 돌려주�
 {% swagger-response status="200: OK" description="response user data table" %}
 ```javascript
 res.cookies('refreshToken', refreshToken).send(
+// accessToken도 cookie로
 { data : {
     "id": PK,
     "user_name": "user_name",
@@ -33,8 +34,8 @@ res.cookies('refreshToken', refreshToken).send(
     "fav_brand" : "fav_brand",
     "createdAt": "created time",
     "updatedAt": "updated time"
-},
-accessToken: accessToken}
+}
+}
 )
 
 
