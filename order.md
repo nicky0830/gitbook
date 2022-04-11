@@ -1,6 +1,8 @@
 # Order
 
-{% swagger method="post" path="/order/{:user_id}/buy" baseUrl="https://server" summary="상세 설명 페이지 - 구매 " %}
+
+
+{% swagger method="post" path="/orders/{:user_id}/buy" baseUrl="https://server" summary="상세 설명 페이지 - 구매 " %}
 {% swagger-description %}
 buy button click, 구Mygpa      Mypage의 구매내역ㅠ
 {% endswagger-description %}
@@ -40,7 +42,7 @@ err
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="post" path="order/{:user_id}/borrow" baseUrl="https://server/" summary="상세 설명 페이지 - 대여" %}
+{% swagger method="post" path="orders/{:user_id}/borrow" baseUrl="https://server/" summary="상세 설명 페이지 - 대여" %}
 {% swagger-description %}
 borrow button click 
 {% endswagger-description %}
@@ -80,7 +82,7 @@ err
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="post" path="/order/{:user_id}/sell" baseUrl="https://server" summary="상세 상품 페이지 - 판매" %}
+{% swagger method="post" path="/orders/{:user_id}/sell" baseUrl="https://server" summary="상세 상품 페이지 - 판매" %}
 {% swagger-description %}
 ㄴㅣsell buttom click
 {% endswagger-description %}
@@ -120,7 +122,7 @@ err
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="get" path="/order/{:user_id}/sell" baseUrl="https://server" summary="Mypage - 판매내역" %}
+{% swagger method="get" path="/orders/{:user_id}/sell" baseUrl="https://server" summary="Mypage - 판매내역" %}
 {% swagger-description %}
 
 {% endswagger-description %}
@@ -158,7 +160,7 @@ err
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="get" path="/order/{:user_id}/buy" baseUrl="https://server" summary="Mypage - 구매내역" %}
+{% swagger method="get" path="/orders/{:user_id}/buy" baseUrl="https://server" summary="Mypage - 구매내역" %}
 {% swagger-description %}
 
 {% endswagger-description %}
@@ -206,7 +208,7 @@ err
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="get" path="/order/{:user_id}/borrow" baseUrl="https://server" summary="Mypage - 대여내역" %}
+{% swagger method="get" path="/orders/{:user_id}/borrow" baseUrl="https://server" summary="Mypage - 대여내역" %}
 {% swagger-description %}
 
 {% endswagger-description %}
